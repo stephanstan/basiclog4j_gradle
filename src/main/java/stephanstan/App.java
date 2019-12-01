@@ -3,8 +3,23 @@
  */
 package stephanstan;
 
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+/**
+ * https://stackify.com/log4j2-java/
+ */
 public class App {
+
+    private static Logger logger = LogManager.getLogger(App.class);
+
     public String getGreeting() {
+        logger.trace("Entering application.");
+       logger.error("This is an error message");
+       logger.info("---------------------------");
+        logger.trace("Exit 1.");
+
         return "Hello world.";
     }
 
